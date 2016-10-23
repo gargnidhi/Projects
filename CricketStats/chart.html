@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<title>Work</title>
+
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="shortcut icon" href="images/favicon1.ico" />
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<!--<script src="js/modernizr-2.6.2.min.js"></script>-->
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+		<!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine/style.css" />
+<script type="text/javascript" src="engine/jquery.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	
+<!-- End WOWSlider.com HEAD section -->
+	</head>
+	<body>
+	
+
+	
+		
+<div class="container">
+			<h2>Data Visualization</h2>
+			<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2"><span class="glyphicon glyphicon-hand-right"></span>Data Visualization</button>
+			<div id="demo2" class="collapse">
+		
+		
+    <div id="chart_div"></div>
+    <br/>
+    <script>
+     google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          [ 'Team', 'Matches'],
+          [ 'India', 866],
+          [ 'Australia',838 ],
+          ['Pakistan', 823],
+          ['Sri Lanka', 729],
+					['West Indies',719],
+          ['New Zealand',659],
+          ['England',626],
+          ['South Africa',518],
+          ['Zimbabwe',432],
+          ['Bangladesh',289]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'ODIs-ALL TEAM- Matches ',
+            subtitle: '2014',
+          },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          hAxis: {format: 'decimal'},
+          height: 250,
+          colors: ['#7570b3']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_div'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+
+        var btns = document.getElementById('btn-group');
+
+        btns.onclick = function (e) {
+
+          if (e.target.tagName === 'BUTTON') {
+            options.hAxis.format = e.target.id === 'none' ? '' : e.target.id;
+            chart.draw(data, google.charts.Bar.convertOptions(options));
+          }
+        }
+      }
+</script>
+			</div>
+			</div>
+
+
+	<!-- jQuery -->
+	<!-- jQuery Easing -->
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<!-- Flexslider -->
+	<!-- Stellar -->
+	
+	<!-- MAIN JS -->
+
+	</body>
+</html>
+
+
+
+
